@@ -39,14 +39,19 @@
  
 
             <div class=" col-auto mr-auto text-center ">
-                <div class="p-1 ">
-              
-                <button type="button" class="btn btn-primary btn-lg"onclick="subtract()">-</button>
-                &nbsp;<span id="energyQuantity"class="energyNumber">3</span>&nbsp;
-                <button type="button" class="btn btn-primary btn-lg"onclick="add()">+</button>&nbsp;
-                <button type="button" class="btn btn-warning btn-lg"onclick="nextRound()">END TURN</button> 
-                <img src="assets/img/cards.png" onclick="subCard()"style="cursor:pointer">&nbsp;<span id="cardsQuantity" class="cardNumber"onclick="subCard()">6</span>     
-                <button type="button" class="btn btn-primary btn-lg"onclick="addCard()">+</button>   
+                <div class="">
+                <button type="button" class="btn btn-primary btn-lg"data-toggle="tooltip" data-placement="bottom" title="Press for -1 Energy"onclick="subtract()">
+                    -</button>
+                &nbsp;<span id="energyQuantity"class="energyNumber">
+                    3</span>
+                &nbsp;<button type="button" class="btn btn-primary btn-sm"data-toggle="tooltip" data-placement="bottom" title="Press for +1 Energy"onclick="add()">
+                    +</button>&nbsp;
+                <button type="button" class="btn btn-warning btn-lg"onclick="nextRound()">
+                    END TURN</button> 
+                <img src="assets/img/cards.png" data-toggle="tooltip" data-placement="bottom" title="Press for -1 Card"onclick="subCard()"style="cursor:pointer"><span id="cardsQuantity" class="cardNumber"onclick="subCard()">
+                    6</span>     
+                <button type="button" class="btn btn-primary btn-sm"onclick="addCard()"data-toggle="tooltip" data-placement="bottom" title="Press for +1 Card">
+                    +</button>   
                   
                 </div><!--botoes top-->
 
@@ -55,10 +60,14 @@
 
             <thead>
                 <tr>
-                    <th class="table-header">Parts</th>
-                    <th class="table-header">First Appearance</th>
-                    <th class="table-header">Second Appearance</th>
-                    <th class="table-header">DMG/Shield
+                    <th class="table-header">
+                        Parts</th>
+                    <th class="table-header">
+                        First Appearance</th>
+                    <th class="table-header">
+                        Second Appearance</th>
+                    <th class="table-header">
+                        DMG/Shield
                     </span></th>
                 </tr>
             </thead>
@@ -66,82 +75,94 @@
             <tbody>
                 <div>
                     <tr>
-                        <td class="axie1">Mouth</td>
-                        <td  class="axie1" onclick="toggleA1M1();subCard();"><i class=" fas fa-times" id="a1m1"></i></td>
-                        <td  class="axie1" onclick="toggleA1M2();subCard();"><i class="fas fa-times" id="a1m2"></i>
+                        <td class="axie1">
+                            Mouth</td>
+                        <td   data-toggle="tooltip" data-placement="bottom" title="Press for -1 Card"class="axie1" onclick="toggleA1M1();subCard();"><i class=" fas fa-times" id="a1m1"></i></td>
+                        <td   data-toggle="tooltip" data-placement="bottom" title="Press for -1 Card"class="axie1" onclick="toggleA1M2();subCard();"><i class="fas fa-times" id="a1m2"></i>
                         <td><input type="text" id="danoBoca1" name="danoBoca1" size="6"placeholder="100" ></td>
                         </td>
                     </tr>
                     <tr>
-                        <td class="axie1">Horn</td>
-                        <td class="axie1" onclick="toggleA1H1();subCard();"><i class=" fas fa-times" id="a1h1"></td>
-                        <td class="axie1" onclick="toggleA1H2();subCard();"><i class=" fas fa-times" id="a1h2"></td>
+                        <td class="axie1">
+                            Horn</td>
+                        <td  data-toggle="tooltip" data-placement="bottom" title="Press for -1 Card"class="axie1" onclick="toggleA1H1();subCard();"><i class=" fas fa-times" id="a1h1"></td>
+                        <td  data-toggle="tooltip" data-placement="bottom" title="Press for -1 Card"class="axie1" onclick="toggleA1H2();subCard();"><i class=" fas fa-times" id="a1h2"></td>
                             <td><input type="text" id="danoBoca1" name="danoBoca1" size = "6"placeholder="100"></td>
                     </tr>
                     <tr>
-                        <td class="axie1">Back</td>
-                        <td class="axie1" onclick="toggleA1B1();subCard();"><i class=" fas fa-times" id="a1b1"></td>
-                        <td class="axie1" onclick="toggleA1B2();subCard();"><i class=" fas fa-times" id="a1b2"></td>
+                        <td class="axie1">
+                            Back</td>
+                        <td  data-toggle="tooltip" data-placement="bottom" title="Press for -1 Card"class="axie1" onclick="toggleA1B1();subCard();"><i class=" fas fa-times" id="a1b1"></td>
+                        <td  data-toggle="tooltip" data-placement="bottom" title="Press for -1 Card"class="axie1" onclick="toggleA1B2();subCard();"><i class=" fas fa-times" id="a1b2"></td>
                             <td><input type="text" id="danoBoca1" name="danoBoca1" size="6"placeholder="100" ></td>
                         </tr>
                     <tr>
-                        <td class="axie1">Tail</td>
-                        <td class="axie1" onclick="toggleA1T1();subCard();"><i class=" fas fa-times" id="a1t1"></td>
-                        <td class="axie1" onclick="toggleA1T2();subCard();"><i class=" fas fa-times" id="a1t2"></td>
+                        <td class="axie1">
+                            Tail</td>
+                        <td  data-toggle="tooltip" data-placement="bottom" title="Press for -1 Card"class="axie1" onclick="toggleA1T1();subCard();"><i class=" fas fa-times" id="a1t1"></td>
+                        <td  data-toggle="tooltip" data-placement="bottom" title="Press for -1 Card"class="axie1" onclick="toggleA1T2();subCard();"><i class=" fas fa-times" id="a1t2"></td>
                             <td><input type="text" id="danoBoca1" name="danoBoca1" size="6" placeholder="100"></td>
                     </tr>
                 </div>
 
                 <div>
                     <tr>
-                        <td class="axie2">Mouth</td>
-                        <td class="axie2" onclick="toggleA2M1();subCard();"><i class=" fas fa-times" id="a2m1"></i></td>
-                        <td class="axie2" onclick="toggleA2M2();subCard();"><i class="fas fa-times" id="a2m2"></i></td>
+                        <td class="axie2">
+                            Mouth</td>
+                        <td  data-toggle="tooltip" data-placement="bottom" title="Press for -1 Card"class="axie2" onclick="toggleA2M1();subCard();"><i class=" fas fa-times" id="a2m1"></i></td>
+                        <td  data-toggle="tooltip" data-placement="bottom" title="Press for -1 Card"class="axie2" onclick="toggleA2M2();subCard();"><i class="fas fa-times" id="a2m2"></i></td>
                         <td><input type="text" id="danoBoca1" name="danoBoca1" size="6" placeholder="100"></td>
                     </tr>
                     <tr>
-                        <td class="axie2">Horn</td>
-                        <td class="axie2" onclick="toggleA2H1();subCard();"><i class=" fas fa-times" id="a2h1"></td>
-                        <td class="axie2" onclick="toggleA2H2();subCard();"><i class=" fas fa-times" id="a2h2"></td>
+                        <td class="axie2">
+                            Horn</td>
+                        <td  data-toggle="tooltip" data-placement="bottom" title="Press for -1 Card"class="axie2" onclick="toggleA2H1();subCard();"><i class=" fas fa-times" id="a2h1"></td>
+                        <td  data-toggle="tooltip" data-placement="bottom" title="Press for -1 Card"class="axie2" onclick="toggleA2H2();subCard();"><i class=" fas fa-times" id="a2h2"></td>
                             <td><input type="text" id="danoBoca1" name="danoBoca1" size="6"placeholder="100" ></td>
                     </tr>
                     <tr>
-                        <td class="axie2">Back</td>
-                        <td class="axie2" onclick="toggleA2B1();subCard();"><i class=" fas fa-times" id="a2b1"></td>
-                        <td class="axie2" onclick="toggleA2B2();subCard();"><i class=" fas fa-times" id="a2b2"></td>
+                        <td class="axie2">
+                            Back</td>
+                        <td  data-toggle="tooltip" data-placement="bottom" title="Press for -1 Card"class="axie2" onclick="toggleA2B1();subCard();"><i class=" fas fa-times" id="a2b1"></td>
+                        <td  data-toggle="tooltip" data-placement="bottom" title="Press for -1 Card"class="axie2" onclick="toggleA2B2();subCard();"><i class=" fas fa-times" id="a2b2"></td>
                             <td><input type="text" id="danoBoca1" name="danoBoca1" size="6"placeholder="100" ></td>
                     </tr>
                     <tr>
-                        <td class="axie2">Tail</td>
-                        <td class="axie2" onclick="toggleA2T1();subCard();"><i class=" fas fa-times" id="a2t1"></td>
-                        <td class="axie2" onclick="toggleA2T2();subCard();"><i class=" fas fa-times" id="a2t2"></td>
+                        <td class="axie2">
+                            Tail</td>
+                        <td  data-toggle="tooltip" data-placement="bottom" title="Press for -1 Card"class="axie2" onclick="toggleA2T1();subCard();"><i class=" fas fa-times" id="a2t1"></td>
+                        <td  data-toggle="tooltip" data-placement="bottom" title="Press for -1 Card"class="axie2" onclick="toggleA2T2();subCard();"><i class=" fas fa-times" id="a2t2"></td>
                             <td><input type="text" id="danoBoca1" name="danoBoca1" size="6" placeholder="100"></td>
                     </tr>
                 </div>
 
                 <div>
                     <tr>
-                        <td class="axie3">Mouth</td>
-                        <td class="axie3" onclick="toggleA3M1();subCard();"><i class=" fas fa-times" id="a3m1"></i></td>
-                        <td class="axie3" onclick="toggleA3M2();subCard();"><i class="fas fa-times" id="a3m2"></i></td>
+                        <td class="axie3">
+                            Mouth</td>
+                        <td  data-toggle="tooltip" data-placement="bottom" title="Press for -1 Card"class="axie3" onclick="toggleA3M1();subCard();"><i class=" fas fa-times" id="a3m1"></i></td>
+                        <td  data-toggle="tooltip" data-placement="bottom" title="Press for -1 Card"class="axie3" onclick="toggleA3M2();subCard();"><i class="fas fa-times" id="a3m2"></i></td>
                         <td><input type="text" id="danoBoca1" name="danoBoca1" size="6" placeholder="100"></td>
                     </tr>
                     <tr>
-                        <td class="axie3">Horn</td>
-                        <td class="axie3" onclick="toggleA3H1();subCard();"><i class=" fas fa-times" id="a3h1"></td>
-                        <td class="axie3" onclick="toggleA3H2();subCard();"><i class=" fas fa-times" id="a3h2"></td>
+                        <td class="axie3">
+                            Horn</td>
+                        <td  data-toggle="tooltip" data-placement="bottom" title="Press for -1 Card"class="axie3" onclick="toggleA3H1();subCard();"><i class=" fas fa-times" id="a3h1"></td>
+                        <td  data-toggle="tooltip" data-placement="bottom" title="Press for -1 Card"class="axie3" onclick="toggleA3H2();subCard();"><i class=" fas fa-times" id="a3h2"></td>
                             <td><input type="text" id="danoBoca1" name="danoBoca1" size="6" placeholder="100"></td>
                     </tr>
                     <tr>
-                        <td class="axie3">Back</td>
-                        <td class="axie3" onclick="toggleA3B1();subCard();"><i class=" fas fa-times" id="a3b1"></td>
-                        <td class="axie3" onclick="toggleA3B2();subCard();"><i class=" fas fa-times" id="a3b2"></td>
+                        <td class="axie3">
+                            Back</td>
+                        <td  data-toggle="tooltip" data-placement="bottom" title="Press for -1 Card"class="axie3" onclick="toggleA3B1();subCard();"><i class=" fas fa-times" id="a3b1"></td>
+                        <td  data-toggle="tooltip" data-placement="bottom" title="Press for -1 Card"class="axie3" onclick="toggleA3B2();subCard();"><i class=" fas fa-times" id="a3b2"></td>
                             <td><input type="text" id="danoBoca1" name="danoBoca1" size="6"placeholder="100" ></td>
                     </tr>
                     <tr>
-                        <td class="axie3">Tail</td>
-                        <td class="axie3" onclick="toggleA3T1();subCard();"><i class=" fas fa-times" id="a3t1"></td>
-                        <td class="axie3" onclick="toggleA3T2();subCard();"><i class=" fas fa-times" id="a3t2"></td>
+                        <td class="axie3">
+                            Tail</td>
+                        <td  data-toggle="tooltip" data-placement="bottom" title="Press for -1 Card"class="axie3" onclick="toggleA3T1();subCard();"><i class=" fas fa-times" id="a3t1"></td>
+                        <td  data-toggle="tooltip" data-placement="bottom" title="Press for -1 Card"class="axie3" onclick="toggleA3T2();subCard();"><i class=" fas fa-times" id="a3t2"></td>
                             <td><input type="text" id="danoBoca1" name="danoBoca1" size="6" placeholder="100"></td>
                     </tr>
                    
@@ -154,9 +175,12 @@
 
 
         <div class="col-auto mr-auto p-1 mt-3 roundNumber text-center " >
-        <button type="button" class="btn btn-secondary btn-sm "onclick="uncheckAll()">CLEAR TABLE</button> 
-        <button type="button" class="btn btn-success btn-sm"onclick="reset()">NEW GAME</button>
-		 Round&nbsp;<span id="roundNumber"class="roundNumber">1</span>
+        <button  data-toggle="tooltip" data-placement="bottom" title="Uncheck all marked cards"type="button" class="btn btn-secondary btn-sm "onclick="uncheckAll()">
+            CLEAR TABLE</button> 
+        <button data-toggle="tooltip" data-placement="bottom" title="Let's go NEXT"type="button" class="btn btn-success btn-sm"onclick="reset()">
+            NEW GAME</button>
+		 Round&nbsp;<span id="roundNumber"class="roundNumber">
+             1</span>
       </div><!--botoes bot-->
 
     </div>
